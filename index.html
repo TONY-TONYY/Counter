@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>simple counter using js </title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Rubik', sans-serif;
+		}
+		.container {
+			height: 100vh;
+			width: 100vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			border: solid 100px;
+		}
+
+		span {
+			font-size: 100px;
+			padding: 10px;
+		}
+
+
+		.btn {
+		  display: inline-block;
+		  padding: 15px 25px;
+		  font-size: 24px;
+		  cursor: pointer;
+		  text-align: center;
+		  text-decoration: none;
+		  outline: none;
+		  color: #fff;
+		  background-color: #4CAF50;
+		  border: none;
+		  border-radius: 15px;
+		  box-shadow: 0 9px #999;
+		  margin: 30px;
+		}
+
+		.btn:hover {background-color: #3e8e41}
+
+		.btn:active {
+		  background-color: #3e8e41;
+		  box-shadow: 0 5px #666;
+		  transform: translateY(4px);
+		}
+		p {
+			color: white;
+			text-align: center;
+		}
+
+
+
+	</style>
+</head>
+<body>
+		
+	<div class="container">
+		<h1> Counter </h1>
+		<span id="value"> 0 </span>
+		<div class="btn_container">
+			<button class="btn decrease" onclick="count_decrease()"> Decrease</button>
+			<button class="btn reset" onclick="count_reset()"> Reset </button>
+			<button class="btn increase" onclick="count_increase()"> Increase </button>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		let count = 0;
+
+		function count_increase() {
+			count += 1;
+			document.getElementById("value").innerHTML = count;
+		}
+		function count_reset() {
+			count = 0;
+			document.getElementById("value").innerHTML = count;
+		}
+		function count_decrease() {
+			count -= 1;
+			document.getElementById("value").innerHTML = count;
+		}
+		
+
+
+	</script>
+
+
+
+
+</body>
+</html>
